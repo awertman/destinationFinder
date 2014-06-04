@@ -1,9 +1,6 @@
 * {
   font-family: arail;
 }
-div {
-  /*box-shadow: 0 0 0 1px black;*/
-}
 
 header {
   text-align: center;
@@ -20,9 +17,8 @@ header {
 
 .grid-item img {
   width: 100%;
-  /*width: 30%;*/
   padding: 1%;
-  height: 150px;
+  height: 200px;
 }
 
 .bar{
@@ -96,76 +92,72 @@ header {
 }
 
 .item-title {
-  font-size: 16px;
+  font-size: 20px;
   padding-bottom: 5px;
 }
 
 .item-description {
-  font-size: 11px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
-
-
-
-@media screen and (max-width: 1020px) {
-
+@media screen and (max-width: 1000px) {
   .item-title {
-    font-size: 13px;
+    font-size: 16px;
     padding-bottom: 3px;
   }
 
   .item-description {
-    font-size: 10px;
+    font-size: 14px;
   }
-
 
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {   /*or 800*/
+
+  .item-title {
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+
+  .item-description {
+    font-size: 12px;
+  }
+
+  .grid-item { /* grid_3*/
+    width: 45%;
+    margin: 0 2.5%;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
 
   .item-title {
     font-size: 10px;
-    padding-bottom: 3px;
   }
 
   .item-description {
     font-size: 8px;
   }
 
-  .grid_3 {
-    width: 45%;
-  }
-
 }
 
-@media screen and (max-width: 400px) {
+
+
+
+@media screen and (max-width: 500px) {
 
   .item-title {
-    font-size: 6px;
-    padding-bottom: 3px;
+    font-size: 8px;
   }
 
-  .item-description {
-    font-size: 4px;
+  .grid-item {
+    width: 70%;
+    margin: 0 15%;
   }
-
-  /*.grid-item {*/
-    /*width: 100%;*/
-  /*}*/
-
 
 }
-
-
-
-@media screen and (max-width: 340px) {
-
-  .grid_3 {
-    width: 100%;
-  }
-
-
-}
-
 
