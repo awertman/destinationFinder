@@ -1,4 +1,3 @@
-// var database = angular.module("database",[])
 app.factory('basket', function() {
   searchItems = {
     collection: [],
