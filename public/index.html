@@ -3,12 +3,10 @@
 <!-- ASSIGN OUR ANGULAR MODULE -->
 <html ng-app="app">
 <head>
-  <!-- META -->
   <meta charset="utf-8">
 
   <title>Node/Angular Vacation App</title>
 
-  <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -21,36 +19,28 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/grid.css">
 </head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS -->
 <body ng-controller="mainController" class="container clearfix grid_10">
 
-  <!-- HEADER AND TODO COUNT -->
-  <div class="jumbotron text-center">
+  <header>
     <h1> Destination Finder <span class="label label-info">{{ (basket.collection | searchFor:searchString).length }}</span></h1>
+  </header>
 
-  </div>
-
-  <!-- FORM TO search bar -->
   <div id="filter-bar" class="grid_10">
     <form>
       <div class="form-group">
-        <input type="text" class="form-control input-lg text-center grid_9" placeholder="search keywords" ng-model="searchString">
+        <input type="text" class="form-control input-lg text-center grid_8" placeholder="search keywords" ng-model="searchString">
         <button type="submit" class="btn btn-primary btn-lg" ng-click="searchString = ''">Reset</button>
       </div>
     </form>
   </div>
 
-  <!-- VIEW CHANGE BAR -->
   <div id="view-bar" class="bar grid_10">
-    <a class="new-image" ng-class="{active: layout == 'new'}" ng-click="layout = 'new'">Add New Destination</a>
     <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
     <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
   </div>
 
-  <!-- VIEW OPTIONS -->
   <div class="views">
 
-    <!-- LIST VIEW -->
     <div ng-show="layout == 'list'" class="list-view">
       <div ng-repeat="destination in basket.collection | searchFor:searchString">
         <label class="list-item">
@@ -61,25 +51,12 @@
       </div>
     </div>
 
-    <!-- GRID VIEW -->
     <div ng-show="layout == 'grid'" class="grid-view">
       <div ng-repeat="destination in basket.collection | searchFor:searchString">
         <label class="grid-item grid_3">
           <img src="{{ destination.url }}">
         </label>
       </div>
-    </div>
-
-    <!-- FORM TO CREATE NEW Destination -->
-    <div ng-show="layout == 'new'" class="new-item">
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control input-lg text-center" placeholder="destination name" ng-model="formData.title">
-          <input type="text" class="form-control input-lg text-center" placeholder="image url" ng-model="formData.url">
-          <input type="text" class="form-control input-lg text-center" placeholder="description" ng-model="formData.description">
-          <button type="submit" class="btn btn-primary btn-lg" ng-click="basket.add(formData); formData = {}"> Add </button>
-        </div>
-      </form>
     </div>
 
   </div>
