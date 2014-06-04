@@ -14,10 +14,15 @@ header {
 }
 
 .list-item img {
+  width: 30%;
+  margin-right: 3%;
 }
 
 .grid-item img {
   width: 100%;
+  /*width: 30%;*/
+  padding: 1%;
+  height: 150px;
 }
 
 .bar{
@@ -29,7 +34,7 @@ header {
 
   box-shadow: 0 1px 1px #ccc;
   border-radius: 2px;
-  width: 580px;
+  /*width: 580px;*/
   padding: 10px;
   margin: 45px auto 25px;
   position:relative;
@@ -128,6 +133,9 @@ header {
     font-size: 8px;
   }
 
+  .grid_3 {
+    width: 45%;
+  }
 
 }
 
@@ -142,5 +150,22 @@ header {
     font-size: 4px;
   }
 
+  /*.grid-item {*/
+    /*width: 100%;*/
+  /*}*/
+
 
 }
+
+
+
+@media screen and (max-width: 340px) {
+
+  .grid_3 {
+    width: 100%;
+  }
+
+
+}
+
+
