@@ -4,6 +4,8 @@
   var express  = require('express');
   var application      = express();
   var mongoose = require("mongoose");
+  var logfmt = require("logfmt");
+  var port = 8080 || process.env.PORT ;
   var dotenv = require('dotenv');
   dotenv.load();
 
@@ -44,7 +46,7 @@
     res.sendfile('./public/index.html');
   });
 
-  application.listen(8080);
+  application.listen(port);
   console.log("---------- App listening on port 8080 ----------");
 
 

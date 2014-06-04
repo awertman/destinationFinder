@@ -5,6 +5,8 @@
   "main"         : "server.js",
   "dependencies" : {
     "express"    : "~3.4.4",
-    "mongoose"   : "~3.6.2"
+    "mongoose"   : "~3.6.2",
+    "logfmt"     : "^1.1.2",
+    "dotenv"     : "0.2.8"
     }
   }
