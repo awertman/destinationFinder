@@ -1,0 +1,10 @@
+{
+  "name"         : "angularSearch",
+  "version"      : "0.0.0",
+  "description"  : "node-angular search application.",
+  "main"         : "server.js",
+  "dependencies" : {
+    "express"    : "~3.4.4",
+    "mongoose"   : "~3.6.2"
+    }
+  }
