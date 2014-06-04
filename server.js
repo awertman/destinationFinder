@@ -16,6 +16,7 @@
     application.use(express.bodyParser());
   });
 
+  application.use(logfmt.requestLogger());
 // db set up ==============================================================================================================================
 
   // db initialization
