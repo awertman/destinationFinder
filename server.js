@@ -5,7 +5,7 @@
   var application      = express();
   var mongoose = require("mongoose");
   var logfmt = require("logfmt");
-  var port = 8080 || process.env.PORT ;
+  var port = (process.env.PORT || 8080) ;
   var dotenv = require('dotenv');
   dotenv.load();
 
