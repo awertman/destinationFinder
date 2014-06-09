@@ -4,7 +4,13 @@ app.filter('searchFor', function(){
       return data;
     }
     var result = [];
-    var pattern = '(?=.*' + searchString.replace(" ", ')(?=.*\\b') + ")"
+    pattern = ""
+    filters = searchString.split(" ")
+
+    filters.forEach( function(filter) {
+      pattern += '(?=.*' + filter + ")"
+    })
+
     var regEx = new RegExp(  pattern )
     for ( i in data ) {
       content = data[i].description.toLowerCase() + data[i].title.toLowerCase()
