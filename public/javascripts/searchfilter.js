@@ -4,12 +4,11 @@ app.filter('searchFor', function(){
       return data;
     }
     var result = [];
-    var pattern = "(" + searchString.toLowerCase().replace(" ", ")|(" ) + ")"
-    var regEx = new RegExp(  pattern , "g")
+    var pattern = '(?=.*' + searchString.replace(" ", ')(?=.*\\b') + ")"
+    var regEx = new RegExp(  pattern )
     for ( i in data ) {
-      if ( regEx.test( data[i].description.toLowerCase()) ) {
-        result.push(data[i])
-      } else if ( regEx.test( data[i].title.toLowerCase()) ) {
+      content = data[i].description.toLowerCase() + data[i].title.toLowerCase()
+      if ( content.match( regEx ) ) {
         result.push(data[i])
       }
     }
