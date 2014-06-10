@@ -21,7 +21,9 @@
 <body ng-controller="mainController" class="container clearfix grid_10">
 
   <header>
-    <h1> Destination Finder <span class="label label-info">{{ (basket.collection | searchFor:searchString).length }}</span></h1>
+    <div class="jumbotron text-center">
+      <h1> Destination Finder <span class="label label-info">{{ (basket.collection | searchFor:searchString).length }}</span></h1>
+    </div>
   </header>
 
   <div id="filter-bar" class="grid_10">
